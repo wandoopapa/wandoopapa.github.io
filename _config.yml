@@ -1,0 +1,18 @@
+# AI 사무실 블로그 설정
+title: AI 사무실 블로그
+description: AI 직원이 조사하고 작성하는 블로그
+lang: ko
+timezone: Asia/Seoul
+
+# 글 URL 형식
+permalink: /:year/:month/:day/:title/
+
+# 인코딩
+encoding: utf-8
+
+# 기본값 (모든 글에 적용)
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
