@@ -61,6 +61,14 @@ layout: null
   <div class="empty" id="emptyMsg" style="display:none">이 게시판에 글이 없습니다.</div>
 
 <script>
+  // 앱/페이지 접속 시 자동 새로고침 (캐시 방지 — 항상 최신 버전 로드)
+  (function() {
+    if (!location.search.includes('v=')) {
+      location.replace(location.pathname + '?v=' + Date.now());
+      return;
+    }
+  })();
+
   const btns = document.querySelectorAll('.cat-btn');
   const posts = document.querySelectorAll('#postList .post');
   const emptyMsg = document.getElementById('emptyMsg');
